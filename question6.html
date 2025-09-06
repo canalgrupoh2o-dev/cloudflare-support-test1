@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 6: Redirection by User Agent</title>
+  <link rel="stylesheet" href="cloudflare.css">
+</head>
+
+<body>
+  <div class="cf-header">
+    <img src="https://download.logo.wine/logo/Cloudflare/Cloudflare-Logo.wine.png" alt="Cloudflare Logo" class="cf-logo">
+    <h1>Customer Support Team - Take Home Test</h1>
+  </div>
+  <div class="cf-main">
+    <h2>Question 6: Redirection by User Agent</h2>
+    <div class="user-response">
+      <h3>Response</h3>
+      <p><strong>Dear Customer,</strong></p>
+      <p>Cloudflare Page Rules do not support user agent-based redirects. Use a Cloudflare Worker to achieve this for
+        MSIE 8.0 users.</p>
+      <h4>Steps to Resolve</h4>
+      <ul>
+        <li>Deploy a Worker with
+          <code>if (request.headers.get('User-Agent').includes('MSIE 8.0')) return Response.redirect('/alternative');</code>
+          via the <a href="https://dash.cloudflare.com/?to=/:account/workers-and-pages">Cloudflare Dashboard</a> on your
+          site’s route.
+        </li>
+      </ul>
+      <p>Test the configuration and report any issues.</p>
+      <p><strong>Best regards,</strong><br>Omir<br>Your Cloudflare Support Team</p>
+    </div>
+    <div class="support-tools">
+      <h4>Tools I would use:</h4>
+      <ul>
+        <li><strong>Cloudflare Workers</strong> - <a
+            href="https://dash.cloudflare.com/?to=/:account/workers-and-pages">dash.cloudflare.com</a> to code/deploy.
+        </li>
+        <li><strong>Browser Dev Tools</strong> - Change UA in Network tab to test.</li>
+      </ul>
+    </div>
+    <div class="thought-process-box">
+      <h4>Thought Process:</h4>
+      <p>Confirmed Page Rules limitation. Proposed Worker solution for UA redirection.</p>
+    </div>
+    <div class="sources-box">
+      <h4>Sources and Research:</h4>
+      <p>Reviewed redirect options. Source: <a
+          href="https://developers.cloudflare.com/rules/url-forwarding/examples/perform-mobile-redirects/">Cloudflare UA
+          Redirects</a>.</p>
+    </div>
+    <a href="index.html" class="pill">Back to Home</a>
+  </div>
+  <div class="cf-footer">
+    &copy; 2025 Cloudflare Test. Not an official site.
+  </div>
+</body>
+//test

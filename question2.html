@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 2: Site from California</title>
+  <link rel="stylesheet" href="cloudflare.css">
+</head>
+
+<body>
+  <div class="cf-header">
+    <img src="https://download.logo.wine/logo/Cloudflare/Cloudflare-Logo.wine.png" alt="Cloudflare Logo" class="cf-logo">
+    <h1>Customer Support Team - Take Home Test</h1>
+  </div>
+  <div class="cf-main">
+    <h2>Question 2: Site from California</h2>
+    <div class="user-response">
+      <h3>Response</h3>
+      <p><strong>Dear Customer,</strong></p>
+      <p>Your site is served from California due to Cloudflare’s anycast routing, which directs traffic to the nearest
+        data center based on ISP peering, not geographic proximity.</p>
+      <h4>Steps to Resolve</h4>
+      <ul>
+        <li>Check the serving data center in <a
+            href="https://dash.cloudflare.com/?to=/:account/analytics-and-logs">Cloudflare Analytics</a>.</li>
+        <li>Enable <a href="https://www.cloudflare.com/plans/argo-smart-routing/">Argo Smart Routing</a> to optimize
+          traffic path if needed.</li>
+      </ul>
+      <p>Contact support with further details if required.</p>
+      <p><strong>Best regards,</strong><br>Omir<br>Your Cloudflare Support Team</p>
+    </div>
+    <div class="support-tools">
+      <h4>Tools I would use:</h4>
+      <ul>
+        <li><strong>Cloudflare Analytics</strong> - <a
+            href="https://dash.cloudflare.com/?to=/:account/analytics-and-logs">dash.cloudflare.com</a> for locations.
+        </li>
+        <li><strong>Traceroute</strong> - <code>traceroute yoursite.com</code> to trace path.</li>
+      </ul>
+    </div>
+    <div class="thought-process-box">
+      <h4>Thought Process:</h4>
+      <p>Identified anycast routing as cause. Suggested Analytics check and Argo optimization.</p>
+    </div>
+    <div class="sources-box">
+      <h4>Sources and Research:</h4>
+      <p>Reviewed routing behavior. Source: <a
+          href="https://developers.cloudflare.com/fundamentals/reference/glossary/">Cloudflare Glossary</a>.</p>
+    </div>
+    <a href="index.html" class="pill">Back to Home</a>
+  </div>
+  <div class="cf-footer">
+    &copy; 2025 Cloudflare Test. Not an official site.
+  </div>
+</body>
+
+</html>

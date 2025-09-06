@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1: Site Down</title>
+    <link rel="stylesheet" href="cloudflare.css">
+</head>
+
+<body>
+    <div class="cf-header">
+        <img src="https://www.cloudflare.com/static/media/logo-cloudflare.936c6a50.svg" alt="Cloudflare Logo" class="cf-logo">
+        <h1>Customer Support Team - Take Home Test</h1>
+    </div>
+    <div class="cf-main">
+        <h2>Question 1: Site Down</h2>
+        <div class="user-response">
+            <h3>Response</h3>
+            <p><strong>Dear Customer,</strong></p>
+            <p>Cloudflare nameservers are operational. The issue with http://example.com/ may be due to DNS propagation
+                (up to 48 hours) or a misconfigured DNS record.</p>
+            <h4>Steps to Resolve</h4>
+            <ul>
+                <li>Verify and correct DNS records for http://example.com/ in the <a
+                        href="https://dash.cloudflare.com/?to=/:account/dns">Cloudflare Dashboard</a>. Toggle proxy
+                    status if needed.</li>
+                <li>Check propagation status using <a href="https://www.whatsmydns.net/">What's My DNS</a> across
+                    networks.</li>
+            </ul>
+            <p>If unresolved after 48 hours, provide error logs for further analysis.</p>
+            <p><strong>Best regards,</strong><br>Omir<br>Your Cloudflare Support Team</p>
+        </div>
+        <div class="support-tools">
+            <h4>Tools I would use:</h4>
+            <ul>
+                <li><strong>Cloudflare Dashboard</strong> - <a
+                        href="https://dash.cloudflare.com/?to=/:account/dns">dash.cloudflare.com</a> to verify DNS
+                    status.</li>
+                <li><strong>DNS Checker</strong> - <a href="https://www.whatsmydns.net/">whatsmydns.net</a> for
+                    propagation.</li>
+                <li><strong>Traceroute</strong> - <code>tracert example.com</code> for network path.</li>
+            </ul>
+        </div>
+        <div class="thought-process-box">
+            <h4>Thought Process:</h4>
+            <p>Confirmed nameserver status. Evaluated propagation and misconfiguration as causes. Provided specific
+                troubleshooting steps.</p>
+        </div>
+        <div class="sources-box">
+            <h4>Sources and Research:</h4>
+            <p>Reviewed DNS troubleshooting. Source: <a
+                    href="https://developers.cloudflare.com/dns/troubleshooting/faq/">Cloudflare DNS FAQ</a>.</p>
+        </div>
+        <a href="index.html" class="pill">Back to Home</a>
+    </div>
+    <div class="cf-footer">
+        &copy; 2025 Cloudflare Test. Not an official site.
+    </div>
+</body>
+
+</html>

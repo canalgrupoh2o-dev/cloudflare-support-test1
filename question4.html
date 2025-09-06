@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 4: Cloudflare Nameservers</title>
+  <link rel="stylesheet" href="cloudflare.css">
+</head>
+
+<body>
+  <div class="cf-header">
+    <img src="https://download.logo.wine/logo/Cloudflare/Cloudflare-Logo.wine.png" alt="Cloudflare Logo" class="cf-logo">
+    <h1>Customer Support Team - Take Home Test</h1>
+  </div>
+  <div class="cf-main">
+    <h2>Question 4: Cloudflare Nameservers</h2>
+    <div class="user-response">
+      <h3>Response</h3>
+      <p><strong>Dear Customer,</strong></p>
+      <p>Cloudflare nameservers are authoritative, offering DDoS protection and security, unlike Google DNS and OpenDNS,
+        which provide recursive resolution for end-user queries without domain control.</p>
+      <h4>Answers</h4>
+      <ul>
+        <li><strong>Difference:</strong> Cloudflare nameservers manage your domain’s DNS records and add security
+          features, while Google DNS and OpenDNS resolve names to IPs for users without authoritative control.</li>
+        <li><strong>Delegation with Host DNS:</strong> Yes, partial delegation is possible. Use the <a
+            href="https://dash.cloudflare.com/?to=/:account/dns">Cloudflare Dashboard</a> to delegate specific records
+          to Cloudflare while keeping others with your host. Full delegation requires all DNS to use Cloudflare, but you
+          can still reference host IPs in records.</li>
+      </ul>
+      <p>Contact support for assistance with configuration.</p>
+      <p><strong>Best regards,</strong><br>Omir<br>Your Cloudflare Support Team</p>
+    </div>
+    <div class="support-tools">
+      <h4>Tools I would use:</h4>
+      <ul>
+        <li><strong>Cloudflare Dashboard</strong> - <a
+            href="https://dash.cloudflare.com/?to=/:account/dns">dash.cloudflare.com</a> for setup.</li>
+        <li><strong>nslookup/dig</strong> - <code>dig NS yourdomain.com</code> to confirm delegation.</li>
+      </ul>
+    </div>
+    <div class="thought-process-box">
+      <h4>Thought Process:</h4>
+      <p>Compared authoritative vs. recursive DNS. Assessed partial/full delegation feasibility.</p>
+    </div>
+    <div class="sources-box">
+      <h4>Sources and Research:</h4>
+      <p>Reviewed nameserver functionality. Source: <a
+          href="https://developers.cloudflare.com/dns/nameservers/">Cloudflare Nameservers</a>.</p>
+    </div>
+    <a href="index.html" class="pill">Back to Home</a>
+  </div>
+  <div class="cf-footer">
+    &copy; 2025 Cloudflare Test. Not an official site.
+  </div>
+</body>
+
+</html>

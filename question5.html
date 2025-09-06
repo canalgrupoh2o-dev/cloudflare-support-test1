@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 5: Content Not Cached</title>
+  <link rel="stylesheet" href="cloudflare.css">
+</head>
+
+<body>
+  <div class="cf-header">
+    <img src="https://download.logo.wine/logo/Cloudflare/Cloudflare-Logo.wine.png" alt="Cloudflare Logo" class="cf-logo">
+    <h1>Customer Support Team - Take Home Test</h1>
+  </div>
+  <div class="cf-main">
+    <h2>Question 5: Content Not Cached</h2>
+    <div class="user-response">
+      <h3>Response</h3>
+      <p><strong>Dear Customer,</strong></p>
+      <p>Cloudflare caching is not working on your site due to a `Cache-Control: no-store` header from your server at
+        roskolniv.us, which disables caching.</p>
+      <h4>Steps to Resolve</h4>
+      <ul>
+        <li>Modify your server configuration to set <code>Cache-Control: public, max-age=3600</code>.</li>
+        <li>In the <a href="https://dash.cloudflare.com/?to=/:account/caching">Cloudflare Dashboard</a>, enable a "Cache
+          Everything" rule for your resources and purge the cache via <a
+            href="https://dash.cloudflare.com/?to=/:account/caching/purge-cache">Purge Cache</a>.</li>
+      </ul>
+      <p>Verify changes and report if the issue continues.</p>
+      <p><strong>Best regards,</strong><br>Omir<br>Your Cloudflare Support Team</p>
+    </div>
+    <div class="support-tools">
+      <h4>Tools I would use:</h4>
+      <ul>
+        <li><strong>curl</strong> - <code>curl -I roskolniv.us</code> to verify headers.</li>
+        <li><strong>Cloudflare Dashboard</strong> - <a
+            href="https://dash.cloudflare.com/?to=/:account/caching">dash.cloudflare.com</a> for rules/purge.</li>
+      </ul>
+    </div>
+    <div class="thought-process-box">
+      <h4>Thought Process:</h4>
+      <p>Identified `Cache-Control` header as cause. Recommended server and dashboard adjustments.</p>
+    </div>
+    <div class="sources-box">
+      <h4>Sources and Research:</h4>
+      <p>Reviewed caching configuration. Source: <a
+          href="https://developers.cloudflare.com/cache/concepts/cache-control/">Cloudflare Cache-Control</a>.</p>
+    </div>
+    <a href="index.html" class="pill">Back to Home</a>
+  </div>
+  <div class="cf-footer">
+    &copy; 2025 Cloudflare Test. Not an official site.
+  </div>
+</body>
+
+</html>
